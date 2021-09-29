@@ -1,5 +1,3 @@
-const { TRUE } = require("node-sass")
-
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -13,18 +11,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sass`,
-    {
-      resolve: `gatsby-plugin-sass`,
-      options: {
-        cssLoaderOptions: {
-          esModule: TRUE,
-          modules: {
-            namedExport: false,
-          },
-        },
-      },
-    },
     `gatsby-plugin-image`,
     `gatsby-plugin-modal-routing`,
     {
